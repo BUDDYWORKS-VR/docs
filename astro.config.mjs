@@ -6,16 +6,23 @@ export default defineConfig({
 	site: 'https://docs.buddyworks.wtf',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'BUDDYWORKS Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/justbuddy',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Avatar Framework',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Intro', link: '/framework/intro/' },
+					],
+				},
+				{
+					label: 'Avatar Scene',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Intro', link: '/scene/intro/' },
 					],
 				},
 				{
