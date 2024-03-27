@@ -12,17 +12,31 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Welcome!',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Overview', link: '/welcome/intro/' },
+					],
+				},
+				{
 					label: 'Avatar Framework',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Intro', link: '/framework/intro/' },
+						{ label: 'Getting started', link: '/framework/intro/' },
 					],
 				},
 				{
 					label: 'Avatar Scene',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Intro', link: '/scene/intro/' },
+						{ label: 'Getting started', link: '/scene/intro/' },
+					],
+				},
+				{
+					label: 'Poses Extension',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Getting started', link: '/posesextension/intro/' },
 					],
 				},
 				{
