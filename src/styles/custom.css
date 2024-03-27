@@ -2,7 +2,7 @@
 :root {
 	--sl-color-accent-low: #2b2400;
 	--sl-color-accent: #7b6900;
-	--sl-color-accent-high: #d3c99c;
+	--sl-color-accent-high: #FDDA0D;
 	--sl-color-white: #ffffff;
 	--sl-color-gray-1: #eeeeee;
 	--sl-color-gray-2: #c2c2c2;
@@ -16,7 +16,7 @@
 :root[data-theme='light'] {
 	--sl-color-accent-low: #dfd8b6;
 	--sl-color-accent: #7d6b00;
-	--sl-color-accent-high: #3c3200;
+	--sl-color-accent-high: #FDDA0D;
 	--sl-color-white: #181818;
 	--sl-color-gray-1: #272727;
 	--sl-color-gray-2: #383838;
