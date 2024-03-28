@@ -13,6 +13,8 @@ export default defineConfig({
       		],
 			social: {
 				github: 'https://github.com/justbuddy',
+				twitter: 'https://twitter.com/JustBuddy_DE',
+				discord: 'https://buddyworks.wtf',
 			},
 			sidebar: [
 				{
