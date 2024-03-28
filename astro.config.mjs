@@ -39,7 +39,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/scene/intro/' },
 						{ label: 'Installation', link: '/scene/setup/' },
-						{ label: 'Tester Prefabs', link: '/scene/testers/' },
+						{ label: 'Scene Overview', link: '/scene/overview/' },
 					],
 				},
 				{
