@@ -27,6 +27,10 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/framework/intro/' },
+						{ label: 'Installation', link: '/framework/setup/' },
+						{ label: 'Menu Structure', link: '/framework/structure-menu/' },
+						{ label: 'FX Structure', link: '/framework/structure-fx/' },
+
 					],
 				},
 				{
@@ -34,6 +38,8 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/scene/intro/' },
+						{ label: 'Installation', link: '/scene/setup/' },
+						{ label: 'Tester Prefabs', link: '/scene/testers/' },
 					],
 				},
 				{
@@ -41,11 +47,8 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/posesextension/intro/' },
+						{ label: 'Installation', link: '/posesextension/setup/' },
 					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
 				},
 			],
 		}),
