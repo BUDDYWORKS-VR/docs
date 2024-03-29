@@ -1,0 +1,27 @@
+---
+title: BUDDYWORKS Poses Extension - Structure
+description: Locomotion-agnostic pose framework.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+### Parameters
+
+##### Standalone
+- **PE/Set [INT]:** Defines the currently picked pose set. (Like standing, sitting etc.)
+- **PE/Float [Float]:** Used for pose selection and dance speed.
+- **PE/Exit [Bool]:** *Unsynced* parameter used as condition placeholder for to-Exit transitions.
+
+##### GGL Variant
+- **InStation [Bool]:** *Unsynced* Default Parameter used by GGL for conditional checks.
+- **PE/Exit [Bool]:** *Unsynced* Parameter used as condition placeholder for to-Exit transitions.
+- **PE/Active [Bool]:** *Unsynced* Local condition ensuring the support logic is only run for PE functions.
+- **Go/Float [Float]:** Similiar to PE/Float, used for any radial selections by GGL.
+- **Go/VRCEmote [INT]:** GGL parameter that does pretty much everything. PE uses some of its pose-space.
+
+### Action Layer
+
+- **BUDDYWORKS Poses Extension - Poses&Dances:** Main Layer for the pose and emote logic.
+- **BUDDYWORKS Poses Extension - Support Logic:** Additional layer, currently used for the bi-directional free-rotation radial.
+
+
+<Aside>Please be aware that Poses Extension is under constant development, and information in the docs might get outdated.</Aside>

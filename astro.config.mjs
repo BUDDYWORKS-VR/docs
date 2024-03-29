@@ -50,6 +50,8 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/posesextension/intro/' },
 						{ label: 'Installation', link: '/posesextension/setup/' },
+						{ label: 'Structure', link: '/posesextension/structure/' },
+						{ label: 'Action Controller', link: '/posesextension/action/' },
 					],
 				},
 			],
