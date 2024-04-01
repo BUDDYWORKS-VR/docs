@@ -27,3 +27,17 @@
 	--sl-color-gray-7: #f6f6f6;
 	--sl-color-black: #ffffff;
 }
+
+.button {
+  background: var(--sl-color-text-accent) !important;
+  color: var(--sl-color-black) !important;
+  font-size: var(--sl-text-base);
+  padding: 1rem 1.25rem;
+  gap: 0.5em;
+  align-items: center;
+  border-radius: 999rem;
+  line-height: 1.1875;
+  text-decoration: none;
+  display: inline-flex;
+  margin-top: 1rem;
+}
