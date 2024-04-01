@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'BUDDYWORKS Docs',
+			favicon: '/favicon.ico',
       		customCss: [
         	// Relative path to your custom CSS file
         	'./src/styles/custom.css',
