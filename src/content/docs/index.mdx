@@ -16,6 +16,21 @@ hero:
       icon: external
 ---
 
+import { Icon } from '@astrojs/starlight/components';
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 
+<CardGrid stagger>
+  <Card title="Avatar Framework" icon="pencil">
+    Quick-start your avatar creation process, every time!    
+    <a class="button" href="/framework/intro">Read...</a>
+  </Card>
+    <Card title="Avatar Scene" icon="open-book">
+    Ready to go Scene for fancy deployments.  
+    <a class="button" href="/scene/intro">Browse...</a>
+  </Card>
+      <Card title="Poses Extension" icon="star">
+    Locomotion-agnostic pose framework.  
+    <a class="button" href="/posesextension/intro">Inspect...</a>
+  </Card>
+</CardGrid>
