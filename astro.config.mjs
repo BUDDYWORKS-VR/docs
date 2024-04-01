@@ -8,6 +8,23 @@ export default defineConfig({
 		starlight({
 			title: 'BUDDYWORKS Docs',
 			favicon: '/favicon.ico',
+			description: 'All the details you could ever need.',
+			head: [
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'og:image',
+						content: 'https://docs.buddyworks.wtf/og-image.png',
+					}
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'twitter:image',
+						content: 'https://docs.buddyworks.wtf/og-image.png',
+					}
+				}
+			],
       		customCss: [
         	// Relative path to your custom CSS file
         	'./src/styles/custom.css',
