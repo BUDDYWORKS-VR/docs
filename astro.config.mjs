@@ -89,7 +89,7 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/toolbox/intro/' },
 						{ label: 'Installation', link: '/toolbox/setup/' },
-						{ label: 'Structure', link: '/toolbox/overview' },
+						{ label: 'Components', link: '/toolbox/overview' },
 					],
 				},
 			],
