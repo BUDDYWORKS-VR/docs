@@ -30,7 +30,7 @@ export default defineConfig({
         	'./src/styles/custom.css',
       		],
 			social: {
-				github: 'https://github.com/justbuddy',
+				github: 'https://github.com/BUDDYWORKS-VR',
 				twitter: 'https://twitter.com/JustBuddy_DE',
 				discord: 'https://buddyworks.wtf',
 			},
