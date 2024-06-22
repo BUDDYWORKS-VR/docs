@@ -1,0 +1,30 @@
+---
+title: BUDDYWORKS Expressions Extension - Structure
+description: Gimmick for face expression mixing, useful for photography.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+### Parameters
+
+##### Main Parameters [synced or unsynced]
+- **EE/Active [Bool]:** Triggers the system. *Global Parameter.*
+- **EE/MouthShape [Float]:** Selects mouth shape from the system.
+- **EE/EyeShape [Float]:** Selects eye shape from the system.
+- **EE/PupilShape [Float]:** Defines pupil size in the system.
+
+##### Support Parameters [always unsynced]
+- **EE/Favorite/Save_X [Bool/Trigger]:** Will save current main parameters when triggered, X being the respective slot.
+- **EE/Favorite/Load_X [Bool/Trigger]:** Will load slot X to main parameters, X being the respective save slot.
+- **EE/Favorite/X_MouthShape [Float]:** Stored value for MouthShape, X being the respective save slot.
+- **EE/Favorite/X_EyeShape [Float]:** Stored value for EyeShape, X being the respective save slot.
+- **EE/Favorite/X_PupilShape [Float]:** Stored value for PupilShape, X being the respective save slot.
+
+### MMD Reference
+
+EE uses MMD blendshapes, the reference spreadsheet can be found here:  
+https://docs.google.com/spreadsheets/d/1mfE8s48pUfjP_rBIPN90_nNkAIBUNcqwIxAdVzPBJ-Q/edit#gid=0
+
+We support both Japanese and English blendshapes.  
+While not all of them are in use in EE, please assume that they might be at some point.
+
+<Aside>Please be aware that Expressions Extension is under constant development, and information in the docs might get outdated.</Aside>

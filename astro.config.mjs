@@ -73,6 +73,17 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Expressions Extension',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Getting started', link: '/expressionsextension/intro/' },
+						{ label: 'Installation', link: '/expressionsextension/setup/' },
+						{ label: 'Structure', link: '/expressionsextension/structure/' },
+						{ label: 'FX Controller', link: '/expressionsextension/fx/' },
+						{ label: 'Interface', link: '/expressionsextension/interface/'},
+					],
+				},
+				{
 					label: 'Toolbox',
 					items: [
 						// Each item here is one entry in the navigation menu.
