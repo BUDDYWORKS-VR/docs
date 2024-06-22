@@ -7,8 +7,14 @@ import { Aside } from '@astrojs/starlight/components';
 ### Parameters
 
 ##### Standalone
-- **PE/Set [INT]:** Defines the currently picked pose set. (Like standing, sitting etc.)
+- **PE/Set [Int]:** Defines the currently picked pose set. (Like standing, sitting etc.)
 - **PE/Float [Float]:** Used for pose selection and dance speed.
+- **PE/Height [Float]:** Used for height adjustment.
+- **PE/Mirror [Bool]:** Mirrors your posing.
+- **PE/Reset [Bool]:** *Unsynced* parameter called to reset and disengage Poses Extension.
+- **PE/ViewPortAdjust [Bool]:** *Unsynced* parameter called when the viewpoint should be realigned with the current pose.
+- **PE/Favorite/Showcase [Bool]:** *Unsynced* parameter to engage showcase mode.
+- **PE/Favorite/ShowcaseSpeed [Float]:** *Unsynced* parameter to select showcase speed.
 - **PE/Exit [Bool]:** *Unsynced* parameter used as condition placeholder for to-Exit transitions.
 
 ##### GGL Variant
@@ -16,12 +22,16 @@ import { Aside } from '@astrojs/starlight/components';
 - **PE/Exit [Bool]:** *Unsynced* Parameter used as condition placeholder for to-Exit transitions.
 - **PE/Active [Bool]:** *Unsynced* Local condition ensuring the support logic is only run for PE functions.
 - **Go/Float [Float]:** Similiar to PE/Float, used for any radial selections by GGL.
-- **Go/VRCEmote [INT]:** GGL parameter that does pretty much everything. PE uses some of its pose-space.
+- **Go/VRCEmote [Int]:** GGL parameter that does pretty much everything. PE uses some of its pose-space.
+
+##### Support Parameters [always unsynced]
+- **PE/Favorite/Slot_X_Save [Bool/Trigger]:** Will save current main parameters when triggered, X being the respective slot.
+- **PE/Favorite/Slot_X_Load [Bool/Trigger]:** Will load slot X to main parameters, X being the respective save slot.
+- **PE/Favorite/Slot_X_Set [Int]:** Stored value for PE/Set, X being the respective save slot.
+- **PE/Favorite/Slot_X_Pose [Float]:** Stored value for PE/Set, X being the respective save slot.
 
 ### Action Layer
 
 - **BUDDYWORKS Poses Extension - Poses&Dances:** Main Layer for the pose and emote logic.
-- **BUDDYWORKS Poses Extension - Support Logic:** Additional layer, currently used for the bi-directional free-rotation radial.
-
-
-<Aside>Please be aware that Poses Extension is under constant development, and information in the docs might get outdated.</Aside>
+- **BUDDYWORKS Poses Extension - Support Logic A:** Logic layer, controls slider loops, reset handling, viewport and save/load.
+- **BUDDYWORKS Poses Extension - Support Logic B:** Logic layer, orchestrates the showcase system.

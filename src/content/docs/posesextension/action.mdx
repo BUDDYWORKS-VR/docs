@@ -4,6 +4,8 @@ description: Locomotion-agnostic pose framework.
 ---
 import { Aside } from '@astrojs/starlight/components';
 
+<Aside>The action controller for the **GGL-Variant** is a simpler version of this, the idea is the same.</Aside>
+
 ### Poses&Dances
 ![PE Action Controller Poses&Dances Layer.](./img/003.png)  
 
@@ -16,16 +18,35 @@ Once that is done, we move on to the state selected with PE/Set. Dances and Pose
 
 A direct transition from Warmup to Restore should ensure that the logic works and syncs reliably in case of fast or invalid inputs.
 
-For visual differentiation, we just split Poses and Dances with the middle line, poses being on the top half and dances on the bottom half. This might get packed into statemaschines in the future if needed. 
+If PE/Set changes away from the current category, the layer will advance to *Restore* and loop back.  
+Changes between banks of the same category will be direct, without going to *Restore* first.  
 
-If PE/Set changes away from the current active set, the layer will advance to *Restore* and loop back.  
+Each state machine contains a normal and a mirrored pose of each category's banks, PE/Mirror controls which one is selected.
+
 **Restore** re-engages tracking, essentially reversing changes done in **Warmup**
 
-### Support Logic
-![PE Action Controller Support Layer.](./img/004.png)  
-This layer is used for any additional functions.
+### Support Logic A
+![PE Action Controller Support Layer A.](./img/004.png)  
+This layer is used for the majority of logic functions.
 
-Currently, it is responsible for making the infinite circle loop work whenever the value of PE/Float hits 0 or 100.  
-For the GGL Variant, an additional local check is done to make sure this function only runs when the user interacts with PE, but not with GGL.
+**Reset / Reset Grounded**  
+Reset is called throughout the logic to reset Poses Extension to its original settings and will also disengage it.  
+Reset Grounded engages whenever you get airborne. This circumvents a visual glitch. Will not reset any settings, just disengages Poses Extension.
 
-<Aside>Please be aware that Poses Extension is under constant development, and information in the docs might get outdated.</Aside>
+**Loop - / +**  
+Responsible for the PE/Float radial menus bi-directional looping.
+
+**Save / Load**  
+Logic to save and store to the provided save slots.
+Triggers are used to make those quick and self-resetting.
+
+**ViewPort Adjust**  
+Engaged when the HeightSlider is in use, forces your ViewPort to align with the current Pose, including height.
+
+### Support Logic B
+![PE Action Controller Support Layer B.](./img/005.png) 
+
+It's sole purpose is to run the Showcase logic. It does so by using Parameter drivers to run the Load-triggers.  
+That way, the entire showcase system works without needing any additional synced parameters.  
+PE/Favorite/ShowcaseSpeed influences the time it takes to transition from one slot to the next.
+
