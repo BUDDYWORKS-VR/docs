@@ -81,6 +81,7 @@ export default defineConfig({
 						{ label: 'Structure', link: '/expressionsextension/structure/' },
 						{ label: 'FX Controller', link: '/expressionsextension/fx/' },
 						{ label: 'Interface', link: '/expressionsextension/interface/'},
+						{ label: 'Custom Blendshapes', link: '/expressionsextension/customize/'}
 					],
 				},
 				{
