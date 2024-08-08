@@ -10,7 +10,7 @@ import { Aside } from '@astrojs/starlight/components';
 ![PE Action Controller Poses&Dances Layer.](./img/003.png)  
 
 By default, PE will be inactive and wait for any kind of input.  
-Whenever PE/Set is greater than 0, the layer will advance to *Warmup*, which is responsible to put the avatar in a posable state.  
+Whenever PE/Set is greater than 0, the layer will advance to *Warmup*, which is responsible to put the avatar in a posable state. The warmup transition is forked, depending on whenever Eyelook is engaged or not. The difference is whenever eyes should be included in pose space or not.
 
 Once that is done, we move on to the state selected with PE/Set. Dances and Poses are treated the same here, only difference being how they use the PE/Float value.
 - **Poses:** Motion Time
@@ -24,6 +24,8 @@ Changes between banks of the same category will be direct, without going to *Res
 Each state machine contains a normal and a mirrored pose of each category's banks, PE/Mirror controls which one is selected.
 
 **Restore** re-engages tracking, essentially reversing changes done in **Warmup**
+
+You can make use of the state maschines highlighted in the image "Custom Poses (90)" and "Dances (100+)" to include your own data in PE, more on that in the [Modding Section](/posesextension/modding).
 
 ### Support Logic A
 ![PE Action Controller Support Layer A.](./img/004.png)  
@@ -43,10 +45,20 @@ Triggers are used to make those quick and self-resetting.
 **ViewPort Adjust**  
 Engaged when the HeightSlider is in use, forces your ViewPort to align with the current Pose, including height.
 
+**Migrate Eyelook**  
+Helper logic to migrate your current pose between enabled and disabled eyelook.  
+As PE works in two different pose spaces depending on whenever Eyelook is active or not, PE needs to be reengaged to go through the correct branch. This would reset your current selected pose bank, which this writes back to make the migration more seamless.
+
 ### Support Logic B
 ![PE Action Controller Support Layer B.](./img/005.png) 
 
-It's sole purpose is to run the Showcase logic. It does so by using Parameter drivers to run the Load-triggers.  
+**Showcase Logic**  
+Runs the showcase feature. It does so by using Parameter drivers to run the Load-triggers.  
 That way, the entire showcase system works without needing any additional synced parameters.  
 PE/Favorite/ShowcaseSpeed influences the time it takes to transition from one slot to the next.
 
+**Movement Sensor**  
+Support logic that will reset your current viewpoint when moving, since locomotions overwrite that at every opportunity.
+
+**ViewPoint Prone**  
+If *PE/Settings/ViewPointProne* is active, this will allow the viewpoint to change for the prone pose bank, which is normally disabled.

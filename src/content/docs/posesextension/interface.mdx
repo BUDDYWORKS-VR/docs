@@ -1,0 +1,11 @@
+---
+title: BUDDYWORKS Poses Extension - Interface
+description: Locomotion-agnostic pose framework.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+#### Interface with Poses Extension
+Some cases, like blink handling, might require you to interface with Poses Extension.  
+Poses Extension offers the following ways to interact with it in your own logic:  
+- **PE/Set [Int]** = Currently selected pose bank. Use this to check whenever PE is active. 0 = Inactive, >0 = Active.
+- **PE/Reset [Trigger/Bool]** = Will reset PE completely. Use with conflicting assets.

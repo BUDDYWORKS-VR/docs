@@ -70,6 +70,8 @@ export default defineConfig({
 						{ label: 'Installation', link: '/posesextension/setup/' },
 						{ label: 'Structure', link: '/posesextension/structure/' },
 						{ label: 'Action Controller', link: '/posesextension/action/' },
+						{ label: 'Interface', link: '/posesextension/interface/' },
+						{ label: 'Modding', link: '/posesextension/modding/' },
 					],
 				},
 				{

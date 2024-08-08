@@ -15,7 +15,17 @@ import { Aside } from '@astrojs/starlight/components';
 - **PE/ViewPortAdjust [Bool]:** *Unsynced* parameter called when the viewpoint should be realigned with the current pose.
 - **PE/Favorite/Showcase [Bool]:** *Unsynced* parameter to engage showcase mode.
 - **PE/Favorite/ShowcaseSpeed [Float]:** *Unsynced* parameter to select showcase speed.
+- **PE/Settings/ViewPointCorrection [Bool]:** *Unsynced* parameter toggling viewport adjust functionality.
+- **PE/Settings/ViewPointProne [Bool]:** *Unsynced* parameter overriding viewport adjust for prone.
+- **PE/Eyelook/Active [Bool]:** *Unsynced* parameter that states whenever Eyelook is active or not.
+- **PE/Eyelook/X [Float]:** *Unsynced* parameter defining Eyelook X direction.
+- **PE/Eyelook/Y [Float]:** *Unsynced* parameter defining Eyelook Y direction.
 - **PE/Exit [Bool]:** *Unsynced* parameter used as condition placeholder for to-Exit transitions.
+
+:::note
+You can change the three eyelook parameters to synced if you want others to see your eyelook position.
+It is disabled by default because it is expensive in memory.
+:::
 
 ##### GGL Variant
 - **InStation [Bool]:** *Unsynced* Default Parameter used by GGL for conditional checks.
@@ -29,9 +39,14 @@ import { Aside } from '@astrojs/starlight/components';
 - **PE/Favorite/Slot_X_Load [Bool/Trigger]:** Will load slot X to main parameters, X being the respective save slot.
 - **PE/Favorite/Slot_X_Set [Int]:** Stored value for PE/Set, X being the respective save slot.
 - **PE/Favorite/Slot_X_Pose [Float]:** Stored value for PE/Set, X being the respective save slot.
+- **PE/Favorite/Eyelook/X_A [Float]:** Stored value for PE/Eyelook/X, A being the respective save slot.
+- **PE/Favorite/Eyelook/Y_A [Float]:** Stored value for PE/Eyelook/Y, A being the respective save slot.
+- **PE/Favorite/Eyelook/Active_A [Float]:** Stored value for PE/Eyelook/Active, A being the respective save slot.
+- **PE/Eyelook/PoseBuffer [Int]:** Stores the current value of PE/Float, writes it back after migration.
+- **PE/Eyelook/Migrate [Bool]:** Helper parameter, tells migration logic which PE pose space branch we are on.
 
 ### Action Layer
 
 - **BUDDYWORKS Poses Extension - Poses&Dances:** Main Layer for the pose and emote logic.
 - **BUDDYWORKS Poses Extension - Support Logic A:** Logic layer, controls slider loops, reset handling, viewport and save/load.
-- **BUDDYWORKS Poses Extension - Support Logic B:** Logic layer, orchestrates the showcase system.
+- **BUDDYWORKS Poses Extension - Support Logic B:** Logic layer, orchestrates the showcase system and other helper functions.
