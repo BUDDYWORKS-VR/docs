@@ -95,6 +95,16 @@ export default defineConfig({
 						{ label: 'Components', link: '/toolbox/overview' },
 					],
 				},
+				{
+					label: 'Avatar Dynamics',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Getting started', link: '/avatardynamics/intro/' },
+						{ label: 'Installation', link: '/avatardynamics/setup/' },
+						{ label: 'Structure', link: '/avatardynamics/structure' },
+						{ label: 'Adding Sounds', link: '/avatardynamics/modding' }
+					],
+				},
 			],
 		}),
 	],
