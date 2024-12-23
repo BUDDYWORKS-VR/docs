@@ -13,6 +13,7 @@ description: All the details you could ever need.
 - <a href="/posesextension/intro">BUDDYWORKS Poses Extension 3</a>
 - <a href="/expressionsextension/intro">BUDDYWORKS Expressions Extension</a>
 - <a href="/toolbox/intro">BUDDYWORKS Toolbox</a>
+- <a href="/avatardynamics/intro">BUDDYWORKS Avatar Dynamics</a>
 
 **Questions? Contact me in my Discord!**  
 https://discord.buddyworks.wtf
