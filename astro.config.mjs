@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightImageZoom from 'starlight-image-zoom'
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://docs.buddyworks.wtf',
 	integrations: [
 		starlight({
+			plugins: [starlightImageZoom()],
 			title: 'BUDDYWORKS Docs',
 			favicon: '/favicon.ico',
 			description: 'All the details you could ever need.',
