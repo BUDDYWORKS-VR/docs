@@ -44,6 +44,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Avatar Framework',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/framework/intro/' },
@@ -55,6 +56,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Avatar Scene',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/scene/intro/' },
@@ -64,6 +66,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Poses Extension',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/posesextension/intro/' },
@@ -76,6 +79,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Expressions Extension',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/expressionsextension/intro/' },
@@ -88,6 +92,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Toolbox',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/toolbox/intro/' },
@@ -97,6 +102,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Avatar Dynamics',
+					collapsed: true,
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Getting started', link: '/avatardynamics/intro/' },

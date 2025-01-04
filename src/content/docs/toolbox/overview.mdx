@@ -3,28 +3,26 @@ title: BUDDYWORKS Toolbox - Overview
 description: Various tools for avatars.
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Card,CardGrid } from '@astrojs/starlight/components';
 
 ### Components
 
 Toolbox offers a selection of tools, here is a brief explanation of each.
 
-##### Nameplate Viewer
-When enabled, allows you to see nametags (and possibly other UI) through walls.  
-This component is designed to help you find your friends in bigger worlds.
+<CardGrid>
+<Card title="Nameplate Viewer">When enabled, allows you to see nametags (and possibly other UI) through walls.  
+This component is designed to help you find your friends in bigger worlds.</Card>
 
-##### Lights
-Assortment of features to brighten up your view, or the whole scene.  
-*Uses 2 lights.*
+<Card title="Lights">Assortment of features to brighten up your view, or the whole scene.  
+*Uses 2 lights.*</Card>
 
-##### Wireframe
-Viewpoint overlay which allows you to see an estimated wireframe layout of meshes in the world.
+<Card title="Wireframe">Viewpoint overlay which allows you to see an estimated wireframe layout of meshes in the world.
 Might not always be too accurate.  
-*Uses 1 light.*
+*Uses 1 light.*</Card>
 
-##### Greenscreen
-Made to be used with Virtual Desktop's Pasthrough Chroma-Cutout feature.  
+<Card title="Greenscreen">Made to be used with Virtual Desktop's Pasthrough Chroma-Cutout feature.  
 Spawns a sphere around you, use the dials to adjust radius and color.  
-Might not work well when the world uses Post Processing, try to turn Post Processing off if it misbehaves.
+Might not work well when the world uses Post Processing, try to turn Post Processing off if it misbehaves.</Card>
 
-##### PlayerMove
-Station that can move players to otherwise unreachable places.
+<Card title="PlayerMover">Radial-controlled station that can move players to otherwise unreachable places.</Card>
+</CardGrid>
