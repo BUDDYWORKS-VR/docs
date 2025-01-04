@@ -7,7 +7,9 @@ export default defineConfig({
 	site: 'https://docs.buddyworks.wtf',
 	integrations: [
 		starlight({
-			plugins: [starlightImageZoom()],
+			plugins: [starlightImageZoom({
+				showCaptions: true
+			})],
 			title: 'BUDDYWORKS Docs',
 			favicon: '/favicon.ico',
 			description: 'All the details you could ever need.',
