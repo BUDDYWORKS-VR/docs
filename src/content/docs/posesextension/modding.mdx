@@ -34,7 +34,7 @@ Custom poses do not support Eyelook or Height adjust, as the setup for those is 
 To add custom poses, access PE's Action Controller. You should see the main [PE logic-tree](/posesextension/action).   
 
 Double click **Custom Poses (90)** to enter that state maschine.
-![PE Action Controller Custom Pose Bank.](./img/006.png)  
+![Custom Pose Bank of BUDDYWORKS Poses Extension.](./img/006.png)  
 
 The relevant parts of this are **Custom** and **Custom (Mirror)**. Slot your own Pose Bank in both slots.  
 If you want two pose banks and don't need the Mirror functionality, you can slot a different pose bank in **Custom (Mirror)** and disable the "Mirror" checkbox in its inspector. You can switch between those using the Mirror toggle.
@@ -43,7 +43,7 @@ If you want two pose banks and don't need the Mirror functionality, you can slot
 Add all your poses after each other into a single animation clip, use the preview window to check if the poses look correct.  
 If you want a smooth loop like the built-in poses, make sure your last pose is equal to your first pose.
 Your pose bank animation clip should be set up like this for best results:
-![PE Action Controller Custom Pose Bank.](./img/007.png)  
+![The ideal import-settings for the custom pose bank animation clip.](./img/007.png)  
 
 ### Custom Dances
 PE allows you to add your own dances, and provides menus for that. We provide you with three slots you can directly populate with your own dance animations. While you can expand this by following the provided logic yourself, **we discourage adding too much, as dances inflate uncompressed avatar size drastically!**  
@@ -54,7 +54,7 @@ In there, double click **Dances (100+)** to access the Dance State Maschine.
 Slot in your own dances in the highlighted slots, and that should be it! Just make sure your dance animation clips are set to loop.  
 You can access those three custom dances in the **Dances** menu. If you add more than those, you need to modify the menus.  
 Dances have a reserved *PE/Set* range of 100 or higher, so start dances beyond the 3 provided slots at *PE/Set* 108.
-![PE Action Controller Dance Bank.](./img/008.png)  
+![BUDDYWORKS Poses Extension dances statemaschine, custom dances go here.](./img/008.png)  
 
 :::note
 Adding more dances past the 3 provided slots, while not difficult, is not officially supported.  

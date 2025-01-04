@@ -7,7 +7,7 @@ import { Aside } from '@astrojs/starlight/components';
 <Aside>The action controller for the **GGL-Variant** is a simpler version of this, the idea is the same.</Aside>
 
 ### Poses&Dances
-![PE Action Controller Poses&Dances Layer.](./img/003.png)  
+![BUDDYWORKS Poses Extension main action logic.](./img/003.png)  
 
 By default, PE will be inactive and wait for any kind of input.  
 Whenever PE/Set is greater than 0, the layer will advance to *Warmup*, which is responsible to put the avatar in a posable state. The warmup transition is forked, depending on whenever Eyelook is engaged or not. The difference is whenever eyes should be included in pose space or not.
@@ -28,7 +28,7 @@ Each state machine contains a normal and a mirrored pose of each category's bank
 You can make use of the state maschines highlighted in the image "Custom Poses (90)" and "Dances (100+)" to include your own data in PE, more on that in the [Modding Section](/posesextension/modding).
 
 ### Support Logic A
-![PE Action Controller Support Layer A.](./img/004.png)  
+![BUDDYWORKS Poses Extension support layer A, doing various parameter-driving tasks.](./img/004.png)  
 This layer is used for the majority of logic functions.
 
 **Reset / Reset Grounded**  
@@ -50,7 +50,7 @@ Helper logic to migrate your current pose between enabled and disabled eyelook.
 As PE works in two different pose spaces depending on whenever Eyelook is active or not, PE needs to be reengaged to go through the correct branch. This would reset your current selected pose bank, which this writes back to make the migration more seamless.
 
 ### Support Logic B
-![PE Action Controller Support Layer B.](./img/005.png) 
+![BUDDYWORKS Poses Extension support layer B, interfacing with layer A.](./img/005.png) 
 
 **Showcase Logic**  
 Runs the showcase feature. It does so by using Parameter drivers to run the Load-triggers.  
