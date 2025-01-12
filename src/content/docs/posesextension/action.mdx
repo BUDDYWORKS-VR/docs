@@ -10,7 +10,8 @@ import { Aside } from '@astrojs/starlight/components';
 ![BUDDYWORKS Poses Extension main action logic.](./img/003.png)  
 
 By default, PE will be inactive and wait for any kind of input.  
-Whenever PE/Set is greater than 0, the layer will advance to *Warmup*, which is responsible to put the avatar in a posable state. The warmup transition is forked, depending on whenever Eyelook is engaged or not. The difference is whenever eyes should be included in pose space or not.
+Whenever PE/Set is greater than 0, the layer will advance to *Warmup*, which is responsible to put the avatar in a posable state. The warmup transition is forked, depending on whenever Eyelook is engaged or not. The difference is whenever eyes should be included in pose space or not.  
+The track fork allows experimental partial tracking while posing.
 
 Once that is done, we move on to the state selected with PE/Set. Dances and Poses are treated the same here, only difference being how they use the PE/Float value.
 - **Poses:** Motion Time
@@ -33,10 +34,11 @@ This layer is used for the majority of logic functions.
 
 **Reset / Reset Grounded**  
 Reset is called throughout the logic to reset Poses Extension to its original settings and will also disengage it.  
-Reset Grounded engages whenever you get airborne. This circumvents a visual glitch. Will not reset any settings, just disengages Poses Extension.
+Reset Grounded engages whenever you get airborne. This circumvents a visual glitch. Will not reset any settings, just disengages Poses Extension. An exception to this is whenever GoGo Loco is installed, which is automatically detected. The detection can be overridden in the settings menu in-game.
 
-**Loop - / +**  
-Responsible for the PE/Float radial menus bi-directional looping.
+**Loops**  
+Loops specific radial menus around, making rotation seamless.  
+This currently affects the pose radial and each hand for HandAdjust.
 
 **Save / Load**  
 Logic to save and store to the provided save slots.
@@ -45,7 +47,11 @@ Triggers are used to make those quick and self-resetting.
 **ViewPort Adjust**  
 Engaged when the HeightSlider is in use, forces your ViewPort to align with the current Pose, including height.
 
-**Migrate Eyelook**  
+**Random Pose Raffle Logic**  
+Helper logic which randomly selects a pose with a simple randomness system.  
+It will only select the native pose banks.
+
+**Eyelook Migration Logic**  
 Helper logic to migrate your current pose between enabled and disabled eyelook.  
 As PE works in two different pose spaces depending on whenever Eyelook is active or not, PE needs to be reengaged to go through the correct branch. This would reset your current selected pose bank, which this writes back to make the migration more seamless.
 

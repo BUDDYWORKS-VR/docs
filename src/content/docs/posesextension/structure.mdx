@@ -17,15 +17,16 @@ import { Aside } from '@astrojs/starlight/components';
 - **PE/Favorite/ShowcaseSpeed [Float]:** *Unsynced* parameter to select showcase speed.
 - **PE/Settings/ViewPointCorrection [Bool]:** *Unsynced* parameter toggling viewport adjust functionality.
 - **PE/Settings/ViewPointProne [Bool]:** *Unsynced* parameter overriding viewport adjust for prone.
-- **PE/Eyelook/Active [Bool]:** *Unsynced* parameter that states whenever Eyelook is active or not.
-- **PE/Eyelook/X [Float]:** *Unsynced* parameter defining Eyelook X direction.
-- **PE/Eyelook/Y [Float]:** *Unsynced* parameter defining Eyelook Y direction.
+- **PE/Settings/TrackingOverride [Bool]:** *Unsynced* parameter which selects the tracking branch for partial tracking.
+- **PE/Settings/ForceJumpReset [Bool]:** *Unsynced* parameter which overrides GoGo Loco detection.
+- **PE/Compatibility/GoLocomotion_StateBuffer [Bool]:** Saves the state of GoGo Loco locomotion before posing, is restored after posing.
+- **PE/ViewAdjust/Active [Bool]:** *Synced or Unsynced* parameter that states whenever ViewAdjust is active or not.
+- **PE/ViewAdjust/X & Y [Float]:** *Synced or Unsynced* parameter defining ViewAdjust X & Y direction.
+- **PE/HandAdjust/Active [Bool]:** *Synced or Unsynced* parameter that states whenever HandAdjust is active or not.  
+- **PE/HandAdjust/L & R [Float]:** *Synced or Unsynced* parameter defining selected hand gesture on each hand.
+- **PE/RandomPose/Trigger [Trigger/Bool]:** *Unsynced* parameter that invokes the random pose system.
+- **PE/RandomPose/PoseSet [Int]:** *Unsynced* helper parameter to determine a random pose.
 - **PE/Exit [Bool]:** *Unsynced* parameter used as condition placeholder for to-Exit transitions.
-
-:::note
-You can change the three eyelook parameters to synced if you want others to see your eyelook position.
-It is disabled by default because it is expensive in memory.
-:::
 
 ##### GGL Variant
 - **InStation [Bool]:** *Unsynced* Default Parameter used by GGL for conditional checks.
@@ -39,11 +40,17 @@ It is disabled by default because it is expensive in memory.
 - **PE/Favorite/Slot_X_Load [Bool/Trigger]:** Will load slot X to main parameters, X being the respective save slot.
 - **PE/Favorite/Slot_X_Set [Int]:** Stored value for PE/Set, X being the respective save slot.
 - **PE/Favorite/Slot_X_Pose [Float]:** Stored value for PE/Set, X being the respective save slot.
-- **PE/Favorite/Eyelook/X_A [Float]:** Stored value for PE/Eyelook/X, A being the respective save slot.
-- **PE/Favorite/Eyelook/Y_A [Float]:** Stored value for PE/Eyelook/Y, A being the respective save slot.
-- **PE/Favorite/Eyelook/Active_A [Float]:** Stored value for PE/Eyelook/Active, A being the respective save slot.
-- **PE/Eyelook/PoseBuffer [Int]:** Stores the current value of PE/Float, writes it back after migration.
-- **PE/Eyelook/Migrate [Bool]:** Helper parameter, tells migration logic which PE pose space branch we are on.
+- **PE/Favorite/ViewAdjust/X_A [Float]:** Stored value for PE/ViewAdjust/X, A being the respective save slot.
+- **PE/Favorite/ViewAdjust/Y_A [Float]:** Stored value for PE/ViewAdjust/Y, A being the respective save slot.
+- **PE/Favorite/ViewAdjust/Active_A [Float]:** Stored value for PE/ViewAdjust/Active, A being the respective save slot.
+- **PE/ViewAdjust/PoseBuffer [Int]:** Stores the current value of PE/Float, writes it back after migration.
+- **PE/ViewAdjust/Migrate [Bool]:** Helper parameter, tells migration logic which PE pose space branch we are on.
+- **PE/Favorite/HandAdjust/WasActive_A [Bool]:** Stored value for PE/Favorite/HandAdjust/WasActive_A, A being the respective save slot.
+- **PE/Favorite/HandAdjust/L_A [Float]:** Stored value for PE/HandAdjust/L, A being the respective save slot.
+- **PE/Favorite/HandAdjust/R_A [Float]:** Stored value for PE/HandAdjust/R, A being the respective save slot.
+
+### API
+Refer to <a href="/posesextension/interface">Interface</a>
 
 ### Action Layer
 

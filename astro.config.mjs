@@ -76,6 +76,7 @@ export default defineConfig({
 						{ label: 'Getting started', link: '/posesextension/intro/' },
 						{ label: 'Installation', link: '/posesextension/setup/' },
 						{ label: 'Structure', link: '/posesextension/structure/' },
+						{ label: 'Components', link: '/posesextension/components'},
 						{ label: 'Action Controller', link: '/posesextension/action/' },
 						{ label: 'Interface', link: '/posesextension/interface/' },
 						{ label: 'Modding', link: '/posesextension/modding/' },

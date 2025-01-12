@@ -10,7 +10,7 @@ description: All the details you could ever need.
 #### Supported assets:  
 - <a href="/framework/intro"><b>BUDDYWORKS Avatar Framework v2</b></a>  
 - <a href="/scene/intro"><b>BUDDYWORKS Avatar Scene</b></a>
-- <a href="/posesextension/intro"><b>BUDDYWORKS Poses Extension 3</b></a>
+- <a href="/posesextension/intro"><b>BUDDYWORKS Poses Extension 4</b></a>
 - <a href="/expressionsextension/intro"><b>BUDDYWORKS Expressions Extension</b></a>
 - <a href="/toolbox/intro"><b>BUDDYWORKS Toolbox</b></a>
 - <a href="/avatardynamics/intro"><b>BUDDYWORKS Avatar Dynamics</b></a>

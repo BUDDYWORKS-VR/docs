@@ -15,7 +15,6 @@ Setup is easy, just add the prefab to your avatar and you are ready to go!
 As you might have seen, there are a couple options to choose from:
 - **Spawn Standalone Prefab... [VRCFury]:** The full version of Poses Extension.
 - **Spawn GGL-Variant Prefab... [VRCFury]:** A variant of Poses Extension for GoGo Loco
-- **Spawn Prefab... [ModularAvatar]:** A version of the Standalone PE for ModularAvatar.
 
 To save parameter space in GoGo Loco setups, the GGL-Variant will make use of existing GGL parameters, specifically Go/Float and Go/VRCEmote. This makes Poses Extension free to use, but adds a breaking point whenever GoGo Loco does any major changes.  
 Also, the GGL-Variant does not include all features Standalone does, please keep that in mind.
@@ -30,6 +29,12 @@ These options exist for convenience.
 
 If you want to be able to fly with GoGo Loco, you pick the "Beyond" version, else use the "All" one.
 
+### Settings
+![Settings window, allowing you to change the sync state of each PE component.](./img/009.png)  
+The settings window that can be opened in the menu toolbar allow you to change whenever a feature is synced or not. Syncing costs parameters, so adjust to your needs.  
+Regardless of your choice, all features will always be present locally.
+
+
 ### Some items are greyed out!
 PE performs checks to ensure that the necessary component is present in your project.  
 If an option is greyed out, you are missing the dependency needed for that option in your project.  
@@ -39,5 +44,4 @@ You don't need to import all dependencies to use PE, either VRCFury or ModularAv
 
 ### Checks  
 VRCFury = Is package `com.vrcfury.vrcfury` present?  
-ModularAvatar = Is package `nadena.dev.modular-avatar` present?  
 GoGo Loco = Do the GoGo Loco VRCFury prefabs exist in your project? Checks by GUID.  

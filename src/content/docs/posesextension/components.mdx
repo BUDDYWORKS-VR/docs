@@ -1,0 +1,16 @@
+---
+title: BUDDYWORKS Poses Extension - Components
+description: Locomotion-agnostic pose framework.
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Card,CardGrid } from '@astrojs/starlight/components';
+
+#### Components of Poses Extension
+Along with the posing itself, PE consists of a few sub-components that work additively to the Posing.  
+<CardGrid stagger>
+	<Card title="Posing">The core component of PE. Divided in categories and types (banks), the system allows you to dial in a pose.</Card>
+	<Card title="Height Adjust">Allows for free height adjustment during posing. Useful to account for colliders, or the lack thereof.</Card>
+	<Card title="Mirror">Mirrors the current pose, giving more versatility to all poses.</Card>
+	<Card title="View Adjust">Optional component that allows you to adjust the direction your avatar is looking.</Card>
+	<Card title="Hand Adjust">Optional component that can be used to override the current poses' gesture.</Card>
+</CardGrid>
