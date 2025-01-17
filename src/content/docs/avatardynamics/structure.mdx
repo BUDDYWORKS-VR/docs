@@ -6,7 +6,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 ### FX Controller
 #### Effect Layers
-![Structure of the effect layers, they are the same for both noseboop and headpat.](./img/003.png)  
+![Structure of the effect layers, they are the same for both noseboop and headpat.](./img/003.webp)  
 The controller makes heavy use of isLocal assumptions and will work different based on who is running it.  
 
 **User (you):** Process contact-checks, run the animation for yourself and also set the parameter *AD/Noseboop* or *AD/Headpat* to true for a brief time.  
@@ -16,7 +16,7 @@ The controller makes heavy use of isLocal assumptions and will work different ba
 Remote does not perform contact checks, which makes it more reliable.
 
 #### Sound Layer
-![The sound effect layer for the noseboop.](./img/004.png)  
+![The sound effect layer for the noseboop.](./img/004.webp)  
 Will run whenever parameter *AD/Noseboop* is true, play a sound and shuffle *AD/Random* once done playing.  
 This is processed separately to ensure that you and remote players hear the same sound every time.
 
