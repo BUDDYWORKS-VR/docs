@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.1.5",
-    "@astrojs/starlight": "^0.31.0",
+    "@astrojs/starlight": "^0.31.1",
     "@astrojs/tailwind": "^5.1.4",
     "astro": "^5.1.7",
     "sharp": "^0.33.5",
