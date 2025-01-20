@@ -24,12 +24,14 @@ Please assume that Poses Extension GGL-Variant will only work with the latest ve
 <Aside>The regular version will work in any case, even in a setup with GoGo Loco.</Aside>
 
 ### And the other options?
-The two last options allow you to spawn in the regular GoGo Loco VRCFury prefabs.  
+
+#### Spawn GoGo Loco...
+These two options allow you to spawn in the regular GoGo Loco VRCFury prefabs.  
 These options exist for convenience.
 
 If you want to be able to fly with GoGo Loco, you pick the "Beyond" version, else use the "All" one.
 
-### Settings
+#### Settings
 ![Settings window, allowing you to change the sync state of each PE component.](./img/009.webp)  
 The settings window that can be opened in the menu toolbar allow you to change whenever a feature is synced or not. Syncing costs parameters, so adjust to your needs.  
 Regardless of your choice, all features will always be present locally.
@@ -38,10 +40,9 @@ Regardless of your choice, all features will always be present locally.
 ### Some items are greyed out!
 PE performs checks to ensure that the necessary component is present in your project.  
 If an option is greyed out, you are missing the dependency needed for that option in your project.  
-You don't need to import all dependencies to use PE, either VRCFury or ModularAvatar is sufficient.
 
 ![Toolbar menus that are greyed out are missing their dependencies.](./img/002.webp)  
 
 ### Checks  
 VRCFury = Is package `com.vrcfury.vrcfury` present?  
-GoGo Loco = Do the GoGo Loco VRCFury prefabs exist in your project? Checks by GUID.  
+GoGo Loco = Do the GoGo Loco VRCFury prefabs exist in your project? Checks by GUID. Dynamically adjusts based on your GoGo Loco version since GoGo Loco 1.8.5.  
