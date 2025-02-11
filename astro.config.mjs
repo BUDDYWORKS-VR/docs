@@ -36,7 +36,7 @@ export default defineConfig({
       		],
 			social: {
 				github: 'https://github.com/BUDDYWORKS-VR',
-				twitter: 'https://twitter.com/JustBuddy_DE',
+				blueSky: 'https://bsky.app/profile/buddyworks.wtf',
 				discord: 'https://buddyworks.wtf',
 			},
 			sidebar: [
