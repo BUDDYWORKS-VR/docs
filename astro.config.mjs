@@ -11,6 +11,7 @@ export default defineConfig({
 				showCaptions: true
 			})],
 			title: 'BUDDYWORKS Docs',
+			tableOfContents: { minHeadingLevel: 1, maxHeadingLevel: 5 },
 			favicon: '/favicon.ico',
 			description: 'All the details you could ever need.',
 			head: [
