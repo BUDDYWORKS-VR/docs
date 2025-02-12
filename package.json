@@ -15,7 +15,6 @@
     "@astrojs/tailwind": "^6.0.0",
     "astro": "^5.2.6",
     "sharp": "^0.33.5",
-    "starlight-image-zoom": "^0.10.1",
-    "esbuild": ">=0.25.0"
+    "starlight-image-zoom": "^0.10.1"
   }
 }
