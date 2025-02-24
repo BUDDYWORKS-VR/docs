@@ -9,14 +9,18 @@ Some cases, like blink handling, might require you to interface with Poses Exten
 Poses Extension offers the following ways to interact with it in your own logic:  
 
 ##### Read/Write
-- **PE/Set [Int]** = Currently selected pose bank. Use this to check whenever PE is active. 0 = Inactive, >0 = Active.
-- **PE/Reset [Trigger/Bool]** = Will reset PE completely. Use with conflicting assets.
+| Parameter         | Type           | Description                                                                                     |
+|-------------------|----------------|-------------------------------------------------------------------------------------------------|
+| **PE/Set**        | Int            | Currently selected pose bank. Use this to check whenever PE is active. 0 = Inactive, >0 = Active. |
+| **PE/Reset**      | Trigger/Bool   | Will reset PE completely. Use with conflicting assets.                                         |
 
 ##### Read only
-- **PE/API/isActive [Bool]** = Returns true if PE is active.
-- **PE/API/isInstalled [Bool]** = Returns true if PE is installed. Use this in your own asset to detect PE presense.
-- **PE/API/currentState [INT]** = Returns a value based on what PE is currently doing.  
-0 = Inactive  
-1 = Active (No ViewAdjust)  
-2 = Active (ViewAdjust)  
-3 = Disengaging  
+| Parameter                | Type   | Description                                                                                     |
+|--------------------------|--------|-------------------------------------------------------------------------------------------------|
+| **PE/API/isActive**      | Bool   | Returns true if PE is active.                                                                  |
+| **PE/API/isInstalled**   | Bool   | Returns true if PE is installed. Use this in your own asset to detect PE presence.            |
+| **PE/API/currentState**  | Int    | Returns a value based on what PE is currently doing.                                          |
+|                          |        | 0 = Inactive                                                                                   |
+|                          |        | 1 = Active (No ViewAdjust)                                                                     |
+|                          |        | 2 = Active (ViewAdjust)                                                                         |
+|                          |        | 3 = Disengaging                                                                                 |
