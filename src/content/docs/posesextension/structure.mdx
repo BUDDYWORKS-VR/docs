@@ -9,63 +9,63 @@ import { Aside } from '@astrojs/starlight/components';
 ##### Standalone
 | Parameter                                      | Type                     | Description                                                                                     |
 |------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------------|
-| **PE/Set**                                     | Int                      | Defines the currently picked pose set. (Like standing, sitting etc.)                          |
-| **PE/Float**                                   | Float                    | Used for pose selection and dance speed.                                                       |
-| **PE/Height**                                  | Float                    | Used for height adjustment.                                                                     |
-| **PE/Mirror**                                  | Bool                     | Mirrors your posing.                                                                            |
-| **PE/Reset**                                   | Bool                     | *Unsynced* parameter called to reset and disengage Poses Extension.                           |
-| **PE/ViewPortAdjust**                          | Bool                     | *Unsynced* parameter called when the viewpoint should be realigned with the current pose.     |
-| **PE/Favorite/Showcase**                       | Bool                     | *Unsynced* parameter to engage showcase mode.                                                  |
-| **PE/Favorite/ShowcaseSpeed**                  | Float                    | *Unsynced* parameter to select showcase speed.                                                |
-| **PE/Settings/ViewPointCorrection**            | Bool                     | *Unsynced* parameter toggling viewport adjust functionality.                                   |
-| **PE/Settings/ViewPointProne**                 | Bool                     | *Unsynced* parameter overriding viewport adjust for prone.                                     |
-| **PE/Settings/TrackingOverride**               | Bool                     | *Unsynced* parameter which selects the tracking branch for partial tracking.                   |
-| **PE/Settings/ForceJumpReset**                 | Bool                     | *Unsynced* parameter which overrides GoGo Loco detection.                                      |
-| **PE/Settings/DisableProxy**                   | Bool                     | *Unsynced* parameter which disables dial proxy-toggle handling.                                 |
-| **PE/Compatibility/GoLocomotion_StateBuffer** | Bool                     | Saves the state of GoGo Loco locomotion before posing, is restored after posing.               |
-| **PE/ViewAdjust/Active**                       | Bool                     | *Synced or Unsynced* parameter that states whenever ViewAdjust is active or not.               |
-| **PE/ViewAdjust/X & Y**                        | Float                    | *Synced or Unsynced* parameter defining ViewAdjust X & Y direction.                           |
-| **PE/HandAdjust/Active**                       | Bool                     | *Synced or Unsynced* parameter that states whenever HandAdjust is active or not.               |
-| **PE/HandAdjust/L & R**                        | Float                    | *Synced or Unsynced* parameter defining selected hand gesture on each hand.                    |
-| **PE/HeadAdjust/Active**                       | Bool                     | *Synced or Unsynced* parameter that states whenever HeadAdjust is active or not.               |
-| **PE/HeadAdjust/X, Y & Z**                     | Float                    | *Synced or Unsynced* parameter defining head position on each axis.                           |
-| **PE/RandomPose/Trigger**                      | Trigger/Bool            | *Unsynced* parameter that invokes the random pose system.                                      |
-| **PE/RandomPose/PoseSet**                      | Int                      | *Unsynced* helper parameter to determine a random pose.                                       |
-| **PE/Exit**                                    | Bool                     | *Unsynced* parameter used as condition placeholder for to-Exit transitions.                     |
+| **PE/Set**                                     | Int                      | Defines the picked pose set.                                                                    |
+| **PE/Float**                                   | Float                    | For pose selection and dance speed.                                                             |
+| **PE/Height**                                  | Float                    | For height adjustment.                                                                           |
+| **PE/Mirror**                                  | Bool                     | Mirrors your pose.                                                                               |
+| **PE/Reset**                                   | Bool                     | *Unsynced* to reset and disengage Poses Extension.                                             |
+| **PE/ViewPortAdjust**                          | Bool                     | *Unsynced* to realign viewpoint with current pose.                                             |
+| **PE/Favorite/Showcase**                       | Bool                     | *Unsynced* to engage showcase mode.                                                              |
+| **PE/Favorite/ShowcaseSpeed**                  | Float                    | *Unsynced* to select showcase speed.                                                            |
+| **PE/Settings/ViewPointCorrection**            | Bool                     | *Unsynced* to toggle viewport adjust functionality.                                             |
+| **PE/Settings/ViewPointProne**                 | Bool                     | *Unsynced* to override viewport adjust for prone.                                               |
+| **PE/Settings/TrackingOverride**               | Bool                     | *Unsynced* to select tracking branch for partial tracking.                                     |
+| **PE/Settings/ForceJumpReset**                 | Bool                     | *Unsynced* to override GoGo Loco detection.                                                    |
+| **PE/Settings/DisableProxy**                   | Bool                     | *Unsynced* to disable dial proxy-toggle handling.                                               |
+| **PE/Compatibility/GoLocomotion_StateBuffer** | Bool                     | Saves GoGo Loco state before posing, restored after.                                            |
+| **PE/ViewAdjust/Active**                       | Bool                     | *Synced or Unsynced* states if ViewAdjust is active.                                           |
+| **PE/ViewAdjust/X & Y**                        | Float                    | *Synced or Unsynced* defines ViewAdjust X & Y.                                                |
+| **PE/HandAdjust/Active**                       | Bool                     | *Synced or Unsynced* states if HandAdjust is active.                                           |
+| **PE/HandAdjust/L & R**                        | Float                    | *Synced or Unsynced* defines hand gesture on each hand.                                        |
+| **PE/HeadAdjust/Active**                       | Bool                     | *Synced or Unsynced* states if HeadAdjust is active.                                           |
+| **PE/HeadAdjust/X, Y & Z**                     | Float                    | *Synced or Unsynced* defines head position on each axis.                                       |
+| **PE/RandomPose/Trigger**                      | Trigger/Bool            | *Unsynced* to invoke the random pose system.                                                    |
+| **PE/RandomPose/PoseSet**                      | Int                      | *Unsynced* to determine a random pose.                                                          |
+| **PE/Exit**                                    | Bool                     | *Unsynced* condition placeholder for to-Exit transitions.                                       |
 
 
 ##### GGL Variant
 | Parameter              | Type   | Description                                                                                     |
 |------------------------|--------|-------------------------------------------------------------------------------------------------|
-| **InStation**          | Bool   | *Unsynced* Default Parameter used by GGL for conditional checks.                               |
-| **PE/Exit**            | Bool   | *Unsynced* Parameter used as condition placeholder for to-Exit transitions.                    |
-| **PE/Active**          | Bool   | *Unsynced* Local condition ensuring the support logic is only run for PE functions.           |
-| **Go/Float**           | Float  | Similar to PE/Float, used for any radial selections by GGL.                                   |
-| **Go/VRCEmote**        | Int    | GGL parameter that does pretty much everything. PE uses some of its pose-space.                |
+| **InStation**          | Bool   | *Unsynced* Default for GGL conditional checks.                                                 |
+| **PE/Exit**            | Bool   | *Unsynced* condition placeholder for to-Exit transitions.                                       |
+| **PE/Active**          | Bool   | *Unsynced* ensures support logic runs for PE functions.                                        |
+| **Go/Float**           | Float  | Similar to PE/Float, for radial selections by GGL.                                             |
+| **Go/VRCEmote**        | Int    | GGL parameter that performs various functions. PE uses some of its pose-space.                  |
 
 ##### Support Parameters [always unsynced]
 | Parameter                                      | Type            | Description                                                                                     |
 |------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------|
-| **PE/Favorite/Slot_X_Save**                    | Bool/Trigger    | Will save current main parameters when triggered, X being the respective slot.                  |
-| **PE/Favorite/Slot_X_Load**                    | Bool/Trigger    | Will load slot X to main parameters, X being the respective save slot.                        |
-| **PE/Favorite/Slot_X_Set**                     | Int             | Stored value for PE/Set, X being the respective save slot.                                    |
-| **PE/Favorite/Slot_X_Pose**                    | Float           | Stored value for PE/Set, X being the respective save slot.                                    |
-| **PE/Favorite/ViewAdjust/X_A**                 | Float           | Stored value for PE/ViewAdjust/X, A being the respective save slot.                           |
-| **PE/Favorite/ViewAdjust/Y_A**                 | Float           | Stored value for PE/ViewAdjust/Y, A being the respective save slot.                           |
-| **PE/Favorite/ViewAdjust/Active_A**            | Float           | Stored value for PE/ViewAdjust/Active, A being the respective save slot.                      |
-| **PE/ViewAdjust/PoseBuffer**                    | Int             | Stores the current value of PE/Float, writes it back after migration.                         |
-| **PE/ViewAdjust/Migrate**                       | Bool            | Helper parameter, tells migration logic which PE pose space branch we are on.                 |
-| **PE/Favorite/HandAdjust/WasActive_A**         | Bool            | Stored value for PE/Favorite/HandAdjust/WasActive_A, A being the respective save slot.       |
-| **PE/Favorite/HandAdjust/L_A**                 | Float           | Stored value for PE/HandAdjust/L, A being the respective save slot.                           |
-| **PE/Favorite/HandAdjust/R_A**                 | Float           | Stored value for PE/HandAdjust/R, A being the respective save slot.                           |
-| **PE/Favorite/HeadAdjust/WasActive_A**         | Bool            | Stored value for PE/Favorite/HeadAdjust/WasActive_A, A being the respective save slot.       |
-| **PE/Favorite/HeadAdjust/X_A**                 | Float           | Stored value for PE/HeadAdjust/X, A being the respective save slot.                           |
-| **PE/Favorite/HeadAdjust/Y_A**                 | Float           | Stored value for PE/HeadAdjust/Y, A being the respective save slot.                           |
-| **PE/Favorite/HeadAdjust/Z_A**                 | Float           | Stored value for PE/HeadAdjust/Z, A being the respective save slot.                           |
-| **PE/HeadAdjust/Reset**                        | Trigger         | Will reset HeadAdjust to its default values.                                                  |
-| **PE/Proxy/ViewAdjust**                        | Bool            | Triggers PE/ViewAdjust/Active on when its dials are used.                                    |
-| **PE/Proxy/HandAdjust**                        | Bool            | Triggers PE/HandAdjust/Active on when its dials are used.                                    |
-| **PE/Proxy/HeadAdjust**                        | Bool            | Triggers PE/HeadAdjust/Active on when its dials are used.                                    |
+| **PE/Favorite/Slot_X_Save**                    | Bool/Trigger    | Saves current main parameters when triggered, X being the slot.                                |
+| **PE/Favorite/Slot_X_Load**                    | Bool/Trigger    | Loads slot X to main parameters, X being the save slot.                                       |
+| **PE/Favorite/Slot_X_Set**                     | Int             | Value for PE/Set, X being the save slot.                                                      |
+| **PE/Favorite/Slot_X_Pose**                    | Float           | Value for PE/Set, X being the save slot.                                                      |
+| **PE/Favorite/ViewAdjust/X_A**                 | Float           | Value for PE/ViewAdjust/X, A being the save slot.                                             |
+| **PE/Favorite/ViewAdjust/Y_A**                 | Float           | Value for PE/ViewAdjust/Y, A being the save slot.                                             |
+| **PE/Favorite/ViewAdjust/Active_A**            | Float           | Value for PE/ViewAdjust/Active, A being the save slot.                                        |
+| **PE/ViewAdjust/PoseBuffer**                    | Int             | Stores current value of PE/Float, writes back after migration.                                 |
+| **PE/ViewAdjust/Migrate**                       | Bool            | Tells migration logic which PE pose space branch we are on.                                   |
+| **PE/Favorite/HandAdjust/WasActive_A**         | Bool            | Value for PE/Favorite/HandAdjust/WasActive_A, A being the save slot.                         |
+| **PE/Favorite/HandAdjust/L_A**                 | Float           | Value for PE/HandAdjust/L, A being the save slot.                                             |
+| **PE/Favorite/HandAdjust/R_A**                 | Float           | Value for PE/HandAdjust/R, A being the save slot.                                             |
+| **PE/Favorite/HeadAdjust/WasActive_A**         | Bool            | Value for PE/Favorite/HeadAdjust/WasActive_A, A being the save slot.                         |
+| **PE/Favorite/HeadAdjust/X_A**                 | Float           | Value for PE/HeadAdjust/X, A being the save slot.                                             |
+| **PE/Favorite/HeadAdjust/Y_A**                 | Float           | Value for PE/HeadAdjust/Y, A being the save slot.                                             |
+| **PE/Favorite/HeadAdjust/Z_A**                 | Float           | Value for PE/HeadAdjust/Z, A being the save slot.                                             |
+| **PE/HeadAdjust/Reset**                        | Trigger         | Resets HeadAdjust to default values.                                                            |
+| **PE/Proxy/ViewAdjust**                        | Bool            | Triggers PE/ViewAdjust/Active when dials are used.                                            |
+| **PE/Proxy/HandAdjust**                        | Bool            | Triggers PE/HandAdjust/Active when dials are used.                                            |
+| **PE/Proxy/HeadAdjust**                        | Bool            | Triggers PE/HeadAdjust/Active when dials are used.                                            |
 
 
 ### API
@@ -73,6 +73,6 @@ Refer to <a href="/posesextension/interface">Interface</a>
 
 ### Action Layer
 
-- **BUDDYWORKS Poses Extension - Poses&Dances:** Main Layer for the pose and emote logic.
-- **BUDDYWORKS Poses Extension - Support Logic A:** Logic layer, controls slider loops, reset handling, viewport and save/load.
-- **BUDDYWORKS Poses Extension - Support Logic B:** Logic layer, orchestrates the showcase system and other helper functions.
+- **BUDDYWORKS Poses Extension - Poses&Dances:** Main layer for pose and emote logic.
+- **BUDDYWORKS Poses Extension - Support Logic A:** Controls slider loops, reset handling, viewport and save/load.
+- **BUDDYWORKS Poses Extension - Support Logic B:** Orchestrates showcase system and helper functions.
