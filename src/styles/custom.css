@@ -42,3 +42,9 @@
   display: inline-flex;
   margin-top: 1rem;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
