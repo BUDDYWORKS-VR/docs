@@ -34,11 +34,11 @@ export default defineConfig({
         	// Relative path to your custom CSS file
         	'./src/styles/custom.css',
       		],
-			social: {
-				github: 'https://github.com/BUDDYWORKS-VR',
-				blueSky: 'https://bsky.app/profile/buddyworks.wtf',
-				discord: 'https://buddyworks.wtf',
-			},
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/BUDDYWORKS-VR'},
+				{ icon: 'blueSky', label: 'Bluesky', href: 'https://bsky.app/profile/buddyworks.wtf'},
+				{ icon: 'discord', label: 'Discord', href: 'https://buddyworks.wtf'}
+			],
 			sidebar: [
 				{
 					label: 'Welcome!',
