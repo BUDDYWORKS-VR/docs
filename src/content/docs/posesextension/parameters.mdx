@@ -1,5 +1,5 @@
 ---
-title: BUDDYWORKS Poses Extension - Structure
+title: BUDDYWORKS Poses Extension - Parameters
 description: Locomotion-agnostic pose framework.
 ---
 import { Aside } from '@astrojs/starlight/components';
@@ -22,7 +22,6 @@ import { Aside } from '@astrojs/starlight/components';
 | **PE/Settings/TrackingOverride**               | Bool                     | *Unsynced* to select tracking branch for partial tracking.                                     |
 | **PE/Settings/ForceJumpReset**                 | Bool                     | *Unsynced* to override GoGo Loco detection.                                                    |
 | **PE/Settings/DisableProxy**                   | Bool                     | *Unsynced* to disable dial proxy-toggle handling.                                               |
-| **PE/Compatibility/GoLocomotion_StateBuffer** | Bool                     | Saves GoGo Loco state before posing, restored after.                                            |
 | **PE/ViewAdjust/Active**                       | Bool                     | *Synced or Unsynced* states if ViewAdjust is active.                                           |
 | **PE/ViewAdjust/X & Y**                        | Float                    | *Synced or Unsynced* defines ViewAdjust X & Y.                                                |
 | **PE/HandAdjust/Active**                       | Bool                     | *Synced or Unsynced* states if HandAdjust is active.                                           |
@@ -70,9 +69,3 @@ import { Aside } from '@astrojs/starlight/components';
 
 ### API
 Refer to <a href="/posesextension/interface">Interface</a>
-
-### Action Layer
-
-- **BUDDYWORKS Poses Extension - Poses&Dances:** Main layer for pose and emote logic.
-- **BUDDYWORKS Poses Extension - Support Logic A:** Controls slider loops, reset handling, viewport and save/load.
-- **BUDDYWORKS Poses Extension - Support Logic B:** Orchestrates showcase system and helper functions.

@@ -6,7 +6,14 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Aside>The action controller for the **GGL-Variant** is a simpler version of this, the idea is the same.</Aside>
 
-### Poses&Dances
+### Action Layers
+
+- **BUDDYWORKS Poses Extension - Poses&Dances:** Main layer for pose and emote logic.
+- **BUDDYWORKS Poses Extension - Support Logic A:** Controls slider loops, reset handling, viewport and save/load.
+- **BUDDYWORKS Poses Extension - Support Logic B:** Orchestrates showcase system and helper functions.
+
+
+#### Poses&Dances
 ![BUDDYWORKS Poses Extension main action logic.](./img/003.webp)  
 
 By default, PE will be inactive and wait for any kind of input.  
@@ -28,7 +35,7 @@ Each state machine contains a normal and a mirrored pose of each category's bank
 
 You can make use of the state maschines highlighted in the image "Custom Poses (90)" and "Dances (100+)" to include your own data in PE, more on that in the [Modding Section](/posesextension/modding).
 
-### Support Logic A
+#### Support Logic A
 ![BUDDYWORKS Poses Extension support layer A, doing various parameter-driving tasks.](./img/004.webp)  
 This layer is used for the majority of logic functions.
 
@@ -55,7 +62,7 @@ It will only select the native pose banks.
 Helper logic to migrate your current pose between enabled and disabled eyelook.  
 As PE works in two different pose spaces depending on whenever Eyelook is active or not, PE needs to be reengaged to go through the correct branch. This would reset your current selected pose bank, which this writes back to make the migration more seamless.
 
-### Support Logic B
+#### Support Logic B
 ![BUDDYWORKS Poses Extension support layer B, interfacing with layer A.](./img/005.webp) 
 
 **Showcase Logic**  
