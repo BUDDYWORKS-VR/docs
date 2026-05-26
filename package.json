@@ -14,6 +14,6 @@
     "@astrojs/starlight": "^0.38.4",
     "astro": "^6.2.2",
     "sharp": "^0.34.5",
-    "starlight-image-zoom": "^0.14.1"
+    "starlight-image-zoom": "^0.14.2"
   }
 }
