@@ -4,7 +4,7 @@ import starlightImageZoom from 'starlight-image-zoom'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://docs.buddyworks.wtf',
+	site: 'https://buddyworks-vr.github.io/docs/',
 	integrations: [
 		starlight({
 			plugins: [starlightImageZoom({
@@ -19,14 +19,14 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						name: 'og:image',
-						content: 'https://docs.buddyworks.wtf/og-image.png',
+						content: 'https://buddyworks-vr.github.io/docs/og-image.png',
 					}
 				},
 				{
 					tag: 'meta',
 					attrs: {
 						name: 'twitter:image',
-						content: 'https://docs.buddyworks.wtf/og-image.png',
+						content: 'https://buddyworks-vr.github.io/docs/og-image.png',
 					}
 				}
 			],
